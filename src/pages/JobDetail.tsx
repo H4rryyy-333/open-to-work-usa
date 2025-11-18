@@ -143,16 +143,16 @@ const JobDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-b from-background to-primary-light/10">
       <Navbar />
       
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
-          <Card className="p-8">
+          <Card className="p-8 shadow-xl border-border/50">
             <div className="space-y-6">
               {/* Header */}
-              <div>
-                <h1 className="text-4xl font-bold mb-4">{job.title}</h1>
+              <div className="pb-6 border-b border-border/50">
+                <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{job.title}</h1>
                 <div className="flex flex-wrap gap-4 text-muted-foreground mb-4">
                   <span className="flex items-center gap-2">
                     <Building2 className="h-5 w-5" />
@@ -175,7 +175,7 @@ const JobDetail = () => {
 
               {/* Salary */}
               {(job.salary_min || job.salary_max) && (
-                <div className="flex items-center gap-2 text-lg font-semibold text-success">
+                <div className="flex items-center gap-3 text-lg font-semibold text-success bg-success/10 rounded-xl p-4">
                   <DollarSign className="h-6 w-6" />
                   ${job.salary_min?.toLocaleString()} - ${job.salary_max?.toLocaleString()} / year
                 </div>
@@ -238,7 +238,7 @@ const JobDetail = () => {
               {/* Apply Button */}
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button size="lg" className="w-full">
+                  <Button size="lg" className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 shadow-lg text-lg h-14">
                     Apply Now
                   </Button>
                 </DialogTrigger>
