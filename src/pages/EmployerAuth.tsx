@@ -109,11 +109,17 @@ const EmployerAuth = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-accent/10 via-background to-primary/10 p-4">
-      <Card className="w-full max-w-md p-8">
-        <div className="flex items-center justify-center gap-2 mb-8">
-          <Building2 className="h-10 w-10 text-accent" />
-          <h1 className="text-2xl font-bold">Employer Portal</h1>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-accent/10 via-background to-primary/10 p-4 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJoc2woMTk5IDg5JSA0OCUpIiBzdHJva2Utb3BhY2l0eT0iMC4wNSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50"></div>
+      
+      <Card className="w-full max-w-md p-8 shadow-2xl border-border/50 relative z-10">
+        <div className="flex flex-col items-center justify-center gap-3 mb-8">
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-primary flex items-center justify-center">
+            <Building2 className="h-10 w-10 text-accent-foreground" />
+          </div>
+          <h1 className="text-3xl font-bold">Employer Portal</h1>
+          <p className="text-muted-foreground text-center">Hire top international talent</p>
         </div>
 
         <Tabs defaultValue="signin" className="w-full">

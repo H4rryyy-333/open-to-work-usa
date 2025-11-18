@@ -28,10 +28,10 @@ const JobCard = ({
   skills 
 }: JobCardProps) => {
   return (
-    <Card className="p-6 hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-card to-card/50">
+    <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-card border-border/50 hover:-translate-y-1 group">
       <div className="space-y-4">
         <div>
-          <h3 className="text-xl font-semibold mb-2">{title}</h3>
+          <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">{title}</h3>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-1">
               <Building2 className="h-4 w-4" />
@@ -45,9 +45,9 @@ const JobCard = ({
         </div>
 
         {(salaryMin || salaryMax) && (
-          <div className="flex items-center gap-2 text-sm">
+          <div className="flex items-center gap-2 text-sm bg-success/10 rounded-lg p-2">
             <DollarSign className="h-4 w-4 text-success" />
-            <span className="font-medium">
+            <span className="font-semibold text-success">
               ${salaryMin?.toLocaleString()} - ${salaryMax?.toLocaleString()} / year
             </span>
           </div>
@@ -56,19 +56,19 @@ const JobCard = ({
         {jobType && (
           <div className="flex items-center gap-2">
             <Briefcase className="h-4 w-4 text-primary" />
-            <Badge variant="secondary">{jobType}</Badge>
+            <Badge variant="secondary" className="bg-primary-light/50">{jobType}</Badge>
           </div>
         )}
 
         {workAuthorization && workAuthorization.length > 0 && (
           <div className="flex flex-wrap gap-2">
             {workAuthorization.slice(0, 3).map((visa) => (
-              <Badge key={visa} variant="outline" className="text-xs">
+              <Badge key={visa} variant="outline" className="text-xs border-accent/50 text-accent">
                 {visa}
               </Badge>
             ))}
             {workAuthorization.length > 3 && (
-              <Badge variant="outline" className="text-xs">
+              <Badge variant="outline" className="text-xs border-accent/50 text-accent">
                 +{workAuthorization.length - 3} more
               </Badge>
             )}
@@ -78,7 +78,7 @@ const JobCard = ({
         {skills && skills.length > 0 && (
           <div className="flex flex-wrap gap-2">
             {skills.slice(0, 4).map((skill) => (
-              <Badge key={skill} className="text-xs bg-primary/10 text-primary hover:bg-primary/20">
+              <Badge key={skill} className="text-xs bg-primary/10 text-primary hover:bg-primary/20 border-0">
                 {skill}
               </Badge>
             ))}
@@ -86,7 +86,9 @@ const JobCard = ({
         )}
 
         <Link to={`/jobs/${id}`}>
-          <Button className="w-full">View Details</Button>
+          <Button className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 shadow-md">
+            View Details
+          </Button>
         </Link>
       </div>
     </Card>
