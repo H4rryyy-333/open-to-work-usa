@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Search, MapPin, Briefcase } from "lucide-react";
+import heroImage from "@/assets/hero-team.jpg";
 
 interface HeroSectionProps {
   searchTerm: string;
@@ -23,18 +24,21 @@ const HeroSection = ({
   onSearch
 }: HeroSectionProps) => {
   return (
-    <section className="relative py-32 md:py-40 bg-gradient-to-br from-primary via-accent to-primary-glow text-primary-foreground overflow-hidden">
-      {/* Background Image Overlay */}
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-accent/90 to-primary-glow/90"></div>
+    <section className="relative min-h-[75vh] flex items-center bg-background text-foreground overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      ></div>
+      <div className="absolute inset-0 bg-black/35"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-10">
           <div className="space-y-6 animate-fade-in">
-            <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight leading-tight">
-              Step Into a World of <br />Better Opportunities
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-tight text-white drop-shadow-lg">
+              Unlock Your Next <br />Great Opportunity
             </h1>
-            <p className="text-2xl md:text-3xl text-primary-foreground/95 max-w-3xl mx-auto font-light">
+            <p className="text-xl md:text-2xl lg:text-3xl text-white/95 max-w-3xl mx-auto font-light drop-shadow-md">
               Search. Apply. Grow. Your journey starts now.
             </p>
           </div>
