@@ -25,17 +25,17 @@ const HeroSection = ({
   return (
     <section className="relative py-32 md:py-40 bg-gradient-to-br from-primary via-accent to-primary-glow text-primary-foreground overflow-hidden">
       {/* Background Image Overlay */}
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-10"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-accent/90 to-primary-glow/90"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-10">
           <div className="space-y-6 animate-fade-in">
             <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight leading-tight">
-              Connect Students & <br />Job Seekers with Opportunities
+              Step Into a World of <br />Better Opportunities
             </h1>
             <p className="text-2xl md:text-3xl text-primary-foreground/95 max-w-3xl mx-auto font-light">
-              Your gateway to career success. All visa categories welcome. Start building your future today.
+              Search. Apply. Grow. Your journey starts now.
             </p>
           </div>
           
