@@ -5,6 +5,8 @@ import HeroSection from "@/components/sections/HeroSection";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import HowItWorks from "@/components/sections/HowItWorks";
 import SuccessStories from "@/components/sections/SuccessStories";
+import FloatingChat from "@/components/FloatingChat";
+import Footer from "@/components/Footer";
 import { supabase } from "@/lib/supabase";
 
 const Index = () => {
@@ -111,6 +113,9 @@ const Index = () => {
           )}
         </div>
       </section>
+
+      <Footer />
+      <FloatingChat />
     </div>
   );
 };

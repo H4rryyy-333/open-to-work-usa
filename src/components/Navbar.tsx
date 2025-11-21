@@ -43,9 +43,15 @@ const Navbar = () => {
             </span>
           </Link>
           
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-6">
             <Link to="/">
-              <Button variant="ghost" className="hover:bg-primary-light/50">Jobs</Button>
+              <Button variant="ghost" className="hover:bg-primary-light/50 text-base">Find Jobs</Button>
+            </Link>
+            <Link to="/employer/auth">
+              <Button variant="ghost" className="hover:bg-primary-light/50 text-base">For Employers</Button>
+            </Link>
+            <Link to="/">
+              <Button variant="ghost" className="hover:bg-primary-light/50 text-base">About</Button>
             </Link>
             
             {user ? (
@@ -62,12 +68,12 @@ const Navbar = () => {
               <>
                 <Link to="/candidate/auth">
                   <Button variant="outline" className="border-primary/50 hover:bg-primary-light/50">
-                    I'm a Candidate
+                    Sign In
                   </Button>
                 </Link>
                 <Link to="/employer/auth">
                   <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 shadow-md">
-                    I'm an Employer
+                    Get Started
                   </Button>
                 </Link>
               </>
